@@ -439,6 +439,6 @@ But unfanciness lifts the weight of confusion from your shoulders. It lets you w
 
 ## Question this!
 
-Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/unfancy/issues) or comment on the HN thread.
+Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/unfancy/issues) or comment on the [HN thread](https://news.ycombinator.com/item?id=38177844).
 
 Thank you for reading. May you find joy and improve the world through your code!
