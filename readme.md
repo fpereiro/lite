@@ -1,5 +1,23 @@
 # Unfancy software architecture
 
+## tl;dr
+
+1. Software only exists to store, retrieve and transform data.
+2. Think concrete first.
+3. Use functions as the building blocks.
+4. Strictly validate everything that you expose, at runtime.
+5. When you find an error, stop.
+6. Test the real thing.
+7. Design the data flows to be continuous
+8. Minimize the big four: dependencies, lines of code, files and abstraction layers.
+9. Write your own documentation
+10. Think calmly about security.
+11. Choose between consistency and availability.
+12. Avoid change for change's sake.
+13. Always pick the unfancy alternative.
+
+## Introduction
+
 If you wonder why software seems to be so unnecessary complicated, and you suspect that implementing and maintaining good software could be easier, you're not alone.
 
 My perception is that the field of software architecture is mostly comprised of high-sounding, complex conceptual edifices that offer scarce practical guidance on how to create simple and powerful software systems, particularly in the context of small teams. For the most part, software architctures are impressive and well-reasoned, but tend to leave the implementer in a lurch.
@@ -439,6 +457,6 @@ But unfanciness lifts the weight of confusion from your shoulders. It lets you w
 
 ## Question this!
 
-Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/unfancy/issues) or comment on the [HN thread](https://news.ycombinator.com/item?id=38177844).
+Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/unfancy/issues).
 
 Thank you for reading. May you find joy and improve the world through your code!
