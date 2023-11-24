@@ -1,4 +1,4 @@
-# Unfancy software architecture
+# Lite software architecture
 
 ## tl;dr
 
@@ -14,7 +14,7 @@
 10. Think calmly about security.
 11. Choose between consistency and availability.
 12. Avoid change for change's sake.
-13. Always pick the unfancy alternative.
+13. Always pick the lite alternative.
 
 ## Introduction
 
@@ -24,13 +24,13 @@ My perception is that the field of software architecture is mostly comprised of 
 
 Software architectures, however, also embody a written guideline on how to co-create software in the context of a team. *Why code things in a certain way and not another?* This question is not merely interesting, it is the essential question that determines the quality of the technical execution of a sofware team. And software architecture answers, or at least hints at how to answer, that very question. So we cannot do without a software architecture.
 
-If we need a software architecture, let's make it an unfancy one. One that answers the big questions directly, is focused on helping you deeply understand what's going on, and one that helps you gets stuff done today (while not painting yourself into a corner tomorrow).
+If we need a software architecture, let's make it an lite one. One that answers the big questions directly, is focused on helping you deeply understand what's going on, and one that helps you gets stuff done today (while not painting yourself into a corner tomorrow).
 
-Here I will outline just that: a sketch of an unfancy software architecture.
+Here I will outline just that: a sketch of an lite software architecture.
 
-The usual counterargument against an unfancy software architecture will be: why not trust the standards, the best practices, the way things are already being done? Here, it all comes to your (dis)satisfaction with the way software is currently developed and your appetite or aversion to risk. Not going on the well-worn path is guaranteed to be bumpy. But, if you are dissatisfied with the status quo, a bumpy ride sure sounds better than spending your career plodding along a path that, no matter how popular, just doesn't feel right.
+The usual counterargument against an lite software architecture will be: why not trust the standards, the best practices, the way things are already being done? Here, it all comes to your (dis)satisfaction with the way software is currently developed and your appetite or aversion to risk. Not going on the well-worn path is guaranteed to be bumpy. But, if you are dissatisfied with the status quo, a bumpy ride sure sounds better than spending your career plodding along a path that, no matter how popular, just doesn't feel right.
 
-A better counterargument against an unfancy software architecture will be: this won't work at scale. And it might be right, at the edge of the scale: I don't know if Google or Meta can use an unfancy architecture. I haven't worked or built systems that have billions of users. But I venture to say that you can create software that serves millions of users just by using unfancy architecture. I did it once myself (and I hope to have the chance to do it again). I hope this will also help you get your first million users while developing something that still comfortably fits in your head.
+A better counterargument against an lite software architecture will be: this won't work at scale. And it might be right, at the edge of the scale: I don't know if Google or Meta can use an lite architecture. I haven't worked or built systems that have billions of users. But I venture to say that you can create software that serves millions of users just by using lite architecture. I did it once myself (and I hope to have the chance to do it again). I hope this will also help you get your first million users while developing something that still comfortably fits in your head.
 
 Onwards!
 
@@ -211,13 +211,13 @@ It is very demanding to work like this. But increasing the reliability of your s
 
 ## 6. Test the real thing.
 
-The main principle of unfancy testing is to assume that any part of your software that is not tested, is broken. If it is untested and yet it ends up to work, you were lucky.
+The main principle of lite testing is to assume that any part of your software that is not tested, is broken. If it is untested and yet it ends up to work, you were lucky.
 
 This is quite curious. In other human contexts, a keen eye and a certain degree of rework will produce high quality outputs. This can be the case for both a novel or a financial statement. Why do we have to have a thorough and executable set of assertions (tests) that ensure that our code is, for the most part, correct?
 
 I think the answer to this lies in that a small error in a software system can generate large issues in the data that it handles. There's a sort of butterfly effect at work: a small error can cause large disturbances; whereas a novel, or a financial statement, when parsed by a human, most small errors will not disturb the overall picture.
 
-This is compounded by the fact that any nontrivial software handles a large amount of possible inputs and outputs; and even if your code is straightforward and unfancy, it is very common to make mistakes.
+This is compounded by the fact that any nontrivial software handles a large amount of possible inputs and outputs; and even if your code is straightforward and lite, it is very common to make mistakes.
 
 We can boil this down to one point:
 
@@ -240,7 +240,7 @@ The standard approach to testing, nowadays, is the following:
 - Test each of the parts of your software in isolation.
 - Rely on sophisticated tooling to do most of the effort of testing for you.
 
-From an unfancy perspective, this approach is very time consuming and leads to questionable results. This is for the following reasons:
+From an lite perspective, this approach is very time consuming and leads to questionable results. This is for the following reasons:
 - **Mocking considered harmful**: when you test the parts of your system in isolation, you need to mock every other part of your system that interacts with the part that you are testing. These mocks are not the real other parts of your system, but rather more like cardboard cutouts that return one or two values that "look like" what the other parts of your system would return. Often, mocks are incorrect approximations of the other components, which render tests unreliable.
 - **You miss out on the holistic potential of tests**: when you are testing your software from the outside, like a client would use it, you can understand entire data flows. These complete data flows are more understandable than small parts of them.
 
@@ -253,9 +253,9 @@ The first two are indeed useful, but can also quickly be implemented without a t
 
 The type of coverage one is looking for is to approximate a correctness proof for whatever you are testing. This is not easy and requires hard thinking about all possible inputs and outputs. You cannot specify all possible inputs, since the amount can well be infinite; you need to infer the families of inputs, and from there map the families of valid outputs.
 
-If focusing on unit tests and tooling is training with machines at the gym, unfancy testing is like training with free weights. Simple, difficult and (in my view) vastly more effective.
+If focusing on unit tests and tooling is training with machines at the gym, lite testing is like training with free weights. Simple, difficult and (in my view) vastly more effective.
 
-Here are some principles for unfancy testing:
+Here are some principles for lite testing:
 
 **1. Aim asymptotically to cover all possible inputs and outputs.**
 
@@ -295,7 +295,7 @@ It is much more fruitful to test the backend first, which is ultimately responsi
 
 In this way, you also avoid the expensive and mostly futile exercise of mocking a backend when developing a frontend.
 
-There's no good name to summarize this philosophy of testing: end to end (e2e) is usually focused on testing a backend through a frontend; integration testing is focused on just testing integrations, rather than the whole thing. For now, I am going either with *unfancy testing* or *whole system testing*. I'm open to suggestions.
+There's no good name to summarize this philosophy of testing: end to end (e2e) is usually focused on testing a backend through a frontend; integration testing is focused on just testing integrations, rather than the whole thing. For now, I am going either with *lite testing* or *whole system testing*. I'm open to suggestions.
 
 ## 7. Design the data flows to be continuous
 
@@ -370,7 +370,7 @@ Last, but not least: minimize the amount of abstraction layers in your system. F
 
 That's it. You could even compact it into one layer without much loss of generality. You definitely do not need five or ten layers. Each abstraction layer has also to be worth its abstraction weight in silver, if not gold. Don't make your data go through hoops; keep the data flows lean and understandable.
 
-The most effective way to create fancy software is to add multiple abstraction layers and handle their complex interdependencies; conversely, to effectively create unfancy software, use few but essential abstraction layers. And do it while minimizing the overall code that you write, the amount of files in which you write them, and the dependencies on which you rely. Aim to write software that you will be able to run, read and perhaps even admire ten years from now.
+The most effective way to create heavy software is to add multiple abstraction layers and handle their complex interdependencies; conversely, to effectively create lite software, use few but essential abstraction layers. And do it while minimizing the overall code that you write, the amount of files in which you write them, and the dependencies on which you rely. Aim to write software that you will be able to run, read and perhaps even admire ten years from now.
 
 ## 9. Write your own documentation
 
@@ -437,11 +437,11 @@ Pursue a radical conservatism: say "no" almost always, and when you say "yes", m
 
 If your software remains correct, performant and flexible, you won already. Disregard the popularity contest. Focus on the signal, not the noise.
 
-## 13. Always pick the unfancy alternative.
+## 13. Always pick the lite alternative.
 
-If you are in doubt about whether to implement something or not, consider whether you are doing it because you need it, or because it is fancy and it sounds like what everyone is doing these days. It might be that a few things are just fancy but have no clear benefits.
+If you are in doubt about whether to implement something or not, consider whether you are doing it because you need it, or because it is fancy and it sounds like what everyone is doing these days. It might be that a few things - even established practices - have lighter alternatives that actually work better.
 
-Many other things, like an event system, are initially not necessary and would be plainly fancy in the context of a small system with no integrations. But if your system grows and interacts with multiple integrations (and especially if those integrations are unreliable because of reasons outside of your control), the event systems becomes essential; then it is no longer fancy, and you can use it.
+Many other things, like an event system, are initially not necessary and would be plainly heavy in the context of a small system with no integrations. But if your system grows and interacts with multiple integrations (and especially if those integrations are unreliable because of reasons outside of your control), the event systems becomes essential; then it is no longer heavy, and you can use it.
 
 Same goes for layers: if you are 100% sure that you will only serve HTTP requests, you might want to have a single layer for both HTTP routes and application logic. But if you will support webhooks, it is actually unfancier to split the outermost functions (one for HTTP and one for websockets), and then let each of those functions call the corresponding application function with the same inputs.
 
@@ -457,6 +457,6 @@ But unfanciness lifts the weight of confusion from your shoulders. It lets you w
 
 ## Question this!
 
-Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/unfancy/issues).
+Anything I learned, I learned from others or direct experience. Please challenge this, especially if you have direct experience that supports your challenge. Open an [issue](https://github.com/fpereiro/lite/issues).
 
 Thank you for reading. May you find joy and improve the world through your code!
