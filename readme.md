@@ -358,7 +358,7 @@ As for lines of code, Fred Brooks points out that they are the main "cost" of a 
 
 This is also valid for contemporary, high-level language code. The less lines of code you have, the less bugs you will have, and the easier your system will be understood. Your code should not be cryptic, and I'm not saying you should stuff as many statements as possible in a single line. What I am saying is that succintness is extremely valuable in code, and that it will take you very far.
 
-Which brings me to reading code. Any literate human is capable to read entire *books*. It is, to me, plainly ridiculous that source code for a medium project (say, 10k lines of code) has to be scattered into hundreds of files. It doesn't matter if you use a modern IDE to jump from file to file. That level of fragmentation does not help to udnerstand the software; it merely inflicts a death of a thousand cuts on whoever is trying to understand what you wrote. The only benefit of this fragmentation is that it promises "bite-size" portions.
+Which brings me to reading code. Any literate human is capable to read entire *books*. It is, to me, plainly ridiculous that source code for a medium project (say, 10k lines of code) has to be scattered into hundreds of files. It doesn't matter if you use a modern IDE to jump from file to file. That level of fragmentation does not help to understand the software; it merely inflicts a death of a thousand cuts on whoever is trying to understand what you wrote. The only benefit of this fragmentation is that it promises "bite-size" portions.
 
 Stop writing software in fragmentary Sumerian tablets; start trying to write masterpieces, or at least decent novels, that have extension and context. Write a system in two, five, perhaps twenty files, but not a hundred. Trust that if you write things properly, succintly and in a reasonable order, people (including the future you) will be able to read it; a thousand lines should not daunt you, but encourage you.
 
@@ -401,7 +401,7 @@ But the list emerges from a calm approach. If you don't understand why you shoul
 
 Above all, avoid the cargo culte of security; that is, doing actions that seemingly increase the security of a system, but actually do not do so and instead create an illusion of security. For example, there is nothing wrong with having configuration variables inside your code, as long as none of these is a secret key.
 
-To slay security cargo culting, use Kerckhoff's Principle: what protects your system is not obfuscation, but rather a clear, shining design, that also uses a few secrets. All that differentiates you from an attacker is that you are in possession of those secrets and you are not. Things that you do "just in case" to make it more secure actually make your system more complex and therefore can add, over time, potential attack vectors.
+To slay security cargo culting, use Kerckhoff's Principle: what protects your system is not obfuscation, but rather a clear, shining design, that also uses a few secret values. All that differentiates you from an attacker is that you are in possession of those secret values and they are not. Things that you do "just in case" to make it more secure actually make your system more complex and therefore can add, over time, potential attack vectors.
 
 Security cannot be bought either; you can use money to buy and leverage existing systems, but if you buy complex systems that you don't understand well, you are not buying just solutions, but problems too. If your integration with a big, existing security system is buggy, you will have multiple vulnerabilities. If security was just a matter of throwing money at the problem, we wouldn't see the amount of software vulnerabilities that we do see in rich and established tech companies.
 
@@ -447,13 +447,13 @@ Same goes for layers: if you are 100% sure that you will only serve HTTP request
 
 The phrase "keep it simple, stupid" is singularly unhelpful. To say that to a software developer is like saying to a composer: "keep it beautiful, hack". Simplicity is the emergent result of a grounded and laborious process of software development. It is the end result, not the means to that result.
 
-For that reason, I'd rather say instead: "keep it concrete, smart one". You have to be quite smart to develop software; this is not an empty compliment, but a fact. If you rprofession consists of building and maintaining complex logic that interacts with vastly more complicated systems also made of logic, you rely on your wits just to earn your keep.
+For that reason, I'd rather say instead: "keep it concrete, smart one". You have to be quite smart to develop software; this is not an empty compliment, but a fact. If your profession consists of building and maintaining complex logic that interacts with vastly more complicated systems also made of logic, you rely on your wits just to earn your keep.
 
-Unfanciness is vulnerable, because you cannot hide behind a burst of concepts that momentarily confuses others. You are exposing yourself, your concepts, and because you are trying to make yourself and your software as simple and understandable as possible, it is much easier for others to spot your mistakes.
+Liteness is vulnerable, because you cannot hide behind a burst of concepts that momentarily confuses others. You are exposing yourself, your concepts, and because you are trying to make yourself and your software as simple and understandable as possible, it is much easier for others to spot your mistakes.
 
-Unfanciness is not popular, because it induces vulnerability in those who practice it.
+Liteness is not popular, because it induces vulnerability in those who practice it.
 
-But unfanciness lifts the weight of confusion from your shoulders. It lets you walk towards clarity. And even if you take many hits, because you are such an exposed target, every hit can make you grow. Isn't that the point, anyway? Try to follow the path that makes you correct in the long run, rather than the one that reduces the chance of you being found out wrong in the short term.
+But liteness lifts the weight of confusion from your shoulders. It lets you walk towards clarity. And even if you take many hits, because you are such an exposed target, every hit can make you grow. Isn't that the point, anyway? Try to follow the path that makes you correct in the long run, rather than the one that reduces the chance of you being found out wrong in the short term.
 
 ## Question this!
 
