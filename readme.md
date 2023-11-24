@@ -24,13 +24,13 @@ My perception is that the field of software architecture is mostly comprised of 
 
 Software architectures, however, also embody a written guideline on how to co-create software in the context of a team. *Why code things in a certain way and not another?* This question is not merely interesting, it is the essential question that determines the quality of the technical execution of a sofware team. And software architecture answers, or at least hints at how to answer, that very question. So we cannot do without a software architecture.
 
-If we need a software architecture, let's make it an lite one. One that answers the big questions directly, is focused on helping you deeply understand what's going on, and one that helps you gets stuff done today (while not painting yourself into a corner tomorrow).
+If we need a software architecture, let's make it a lite one. One that answers the big questions directly, is focused on helping you deeply understand what's going on, and one that helps you gets stuff done today (while not painting yourself into a corner tomorrow).
 
-Here I will outline just that: a sketch of an lite software architecture.
+Here I will outline just that: a sketch of a lite software architecture.
 
-The usual counterargument against an lite software architecture will be: why not trust the standards, the best practices, the way things are already being done? Here, it all comes to your (dis)satisfaction with the way software is currently developed and your appetite or aversion to risk. Not going on the well-worn path is guaranteed to be bumpy. But, if you are dissatisfied with the status quo, a bumpy ride sure sounds better than spending your career plodding along a path that, no matter how popular, just doesn't feel right.
+The usual counterargument against a lite software architecture will be: why not trust the standards, the best practices, the way things are already being done? Here, it all comes to your (dis)satisfaction with the way software is currently developed and your appetite or aversion to risk. Not going on the well-worn path is guaranteed to be bumpy. But, if you are dissatisfied with the status quo, a bumpy ride sure sounds better than spending your career plodding along a path that, no matter how popular, just doesn't feel right.
 
-A better counterargument against an lite software architecture will be: this won't work at scale. And it might be right, at the edge of the scale: I don't know if Google or Meta can use an lite architecture. I haven't worked or built systems that have billions of users. But I venture to say that you can create software that serves millions of users just by using lite architecture. I did it once myself (and I hope to have the chance to do it again). I hope this will also help you get your first million users while developing something that still comfortably fits in your head.
+A better counterargument against a lite software architecture will be: this won't work at scale. And it might be right, at the edge of the scale: I don't know if Google or Meta can use a lite architecture. I haven't worked or built systems that have billions of users. But I venture to say that you can create software that serves millions of users just by using lite architecture. I did it once myself (and I hope to have the chance to do it again). I hope this will also help you get your first million users while developing something that still comfortably fits in your head.
 
 Onwards!
 
@@ -240,7 +240,7 @@ The standard approach to testing, nowadays, is the following:
 - Test each of the parts of your software in isolation.
 - Rely on sophisticated tooling to do most of the effort of testing for you.
 
-From an lite perspective, this approach is very time consuming and leads to questionable results. This is for the following reasons:
+From a lite perspective, this approach is very time consuming and leads to questionable results. This is for the following reasons:
 - **Mocking considered harmful**: when you test the parts of your system in isolation, you need to mock every other part of your system that interacts with the part that you are testing. These mocks are not the real other parts of your system, but rather more like cardboard cutouts that return one or two values that "look like" what the other parts of your system would return. Often, mocks are incorrect approximations of the other components, which render tests unreliable.
 - **You miss out on the holistic potential of tests**: when you are testing your software from the outside, like a client would use it, you can understand entire data flows. These complete data flows are more understandable than small parts of them.
 
